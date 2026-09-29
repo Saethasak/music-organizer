@@ -61,18 +61,19 @@ public class MusicOrganizer
         }
     }
     public void checkIndex(){
-    System.out.println(files.size() - 1);
+    System.out.println(files.size());
     }
     
     public void validateIndex(int index, boolean validIndex){
     
     if (index>= 0 && index < files.size()){
      validIndex = true;
-     System.out.println(index +" is found");
+     String filename = files.get(index);
+     System.out.println(filename +" is found");
     } 
     else{
      validIndex = false;
-     System.out.println(index +" is not found");
+     System.out.println("index " + index +" is not found");
     }
     }
 }
